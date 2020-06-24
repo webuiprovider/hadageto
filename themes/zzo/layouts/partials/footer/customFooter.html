@@ -1,0 +1,42 @@
+<footer class="footer">
+    <div class="main-footer site-wrapper">
+        <div class="site-container">
+          <div class="logo-container">
+            <img src="/hadageto-logo-206.png"  alt="Hadageto">
+            <p>Keeping you in control of your important documents</p>
+          </div>
+          <div class="main-container">
+            <div class="links">
+                <ul>
+                    {{ range $.Param "footerLinks" }}
+                    <li>
+                        <a href="{{ .link }}" class="footer__link" target="_blank" rel="noreferrer">{{ .name }}</a>
+                    </li>
+                     
+                    {{ end }}
+                </ul>
+                <ul>
+                    {{ range $.Param "footerLinksCol2" }}
+                        <li>
+                            <a href="{{ .link }}" class="footer__link" target="_blank" rel="noreferrer">{{ .name }}</a>
+                        </li>
+                     
+                    {{ end }}
+                </ul>
+              
+            </div>
+            <ul class="social">
+                
+                {{ partial "footer/links-social.html" . }}
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-footer site-wrapper">
+        <div class="site-container">
+          <p>{{ $.Param "footerBottom" | safeHTML }}</p>
+        </div>
+      </div>
+</footer>

@@ -1,0 +1,29 @@
+{{ if $.Param "enableSidebar" }}
+{{ if and (or ($.Param "enableToc") ($.Param "toc")) (ne ($.Param "tocPosition") "outer") }}
+
+<section class="sidebar hide">
+  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
+  
+  <div class="sidebar-cta">
+    <h3><a href="https://hadageto.com/register" target="_blank" class="call-to-action">Sign Up For Hadageto</a></h3>
+    <p>During the COVID-19 lockdown, we're offering a special three-month trial. Use the coupon code "staysafe" during registration for 3 months free!</p>
+  </div>
+  
+  <div class="toc__flexbox cta" data-position="{{ if $.Param "hideToc" }}absolute{{ else }}fixed{{ end }}">
+    <h6 class="toc__title" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">{{ i18n "toc-label" }}</h6>
+    {{ if $.Param "enableTocSwitch" }}
+      <label class="switch" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" {{ if $.Param "hideToc" }}{{ else }}checked{{ end }}>
+        <span class="slider round"></span>
+      </label>
+    {{ end }}
+  </div>
+  <div class="toc cta {{ if $.Param "hideToc" }}hide{{ end }}" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-folding="{{ if $.Param "tocFolding" }}true{{ else }}false{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+    {{ .TableOfContents }}
+  </div>
+
+  
+</section>
+
+{{ end }}
+{{ end }}

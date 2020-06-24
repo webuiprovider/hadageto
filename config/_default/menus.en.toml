@@ -1,0 +1,75 @@
+[[main]]
+  identifier = "about"
+  name = "About"
+  url = "https://hadageto.com/about"
+  weight = 1
+
+  [[main]]
+  identifier = "how-it-works"
+  name = "How it works"
+  url = "https://hadageto.com/about"
+  weight = 2
+
+  [[main]]
+  identifier = "faq"
+  name = "FAQ"
+  url = "https://hadageto.com/about"
+  weight = 3
+
+  [[main]]
+  identifier = "contact-us"
+  name = "Contact us"
+  url = "https://hadageto.com/about"
+  weight = 4  
+
+  [[main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "https://hadageto.com/about"
+  weight = 5
+  
+  [[main]]
+  identifier = "register"
+  name = "Register"
+  url = "https://hadageto.com/about"
+  weight = 6
+
+[[main]]
+  identifier = "press"
+  name = "press"
+  url = "press"
+  weight = 7
+
+[[main]]
+  parent = "press"
+  name = "press pack"
+  url = "presspack"
+  weight = 8
+  
+[[main]]
+  identifier = "tech"
+  name = "tech"
+  url = "tech"
+  weight = 9
+
+[[main]]
+  identifier = "business"
+  name = "business"
+  url = "business"
+  weight = 10
+    
+[[main]]
+  identifier = "posts"
+  name = "posts"
+  url = "posts"
+  weight = 11
+
+
+  
+
+
+
+
+
+
+    
