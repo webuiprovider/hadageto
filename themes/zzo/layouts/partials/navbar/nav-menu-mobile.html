@@ -1,12 +1,19 @@
 {{ partial "navbar/select-theme-mobile" . }}
-{{ partial "search/site-search-mobile" . }}
+<!--{{ partial "search/site-search-mobile" . }}-->
 
-<a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false"
+<div class="mob-nav">
+  <a href="/login" class="login desktop">Login</a>
+  <a href="/register" class="solid-button red create-account desktop">Create my account</a>
+  <a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false"
   data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
   <span aria-hidden="true"></span>
   <span aria-hidden="true"></span>
   <span aria-hidden="true"></span>
 </a>
+  {{ partial "footer/links-social" .}}
+</div>
+
+
 <div class="navbarm__collapse" data-open="false">
   <ul dir="{{ $.Param "languagedir" | default "ltr" }}">
     {{ $current := . }}
