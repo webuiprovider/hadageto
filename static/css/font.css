@@ -1,39 +1,39 @@
 @font-face {
     font-family: 'Avenir';
-    src: url('Avenir-Book-01.ttf') format('ttf'),
-         url('Avenir-Heavy-05.ttf') format('ttf'),
-         url('Avenir-Light-07.ttf') format('ttf');
+    src: url('../fonts/Avenir-Book-01.ttf') format('ttf'),
+         url('../fonts/Avenir-Heavy-05.ttf') format('ttf'),
+         url('../fonts/Avenir-Light-07.ttf') format('ttf');
     font-weight: 900;
     font-style: normal;
   }
   
   @font-face{
     font-family:"Avenir";
-    src:url("/fonts/Avenir-Heavy-05.ttf") format("truetype");
+    src:url("../fonts/Avenir-Heavy-05.ttf") format("truetype");
     font-weight:bolder;
     font-style:normal
   }
   @font-face{
     font-family:"Avenir";
-    src:url("/fonts/Avenir-Heavy-05.ttf") format("truetype");
+    src:url("../fonts/Avenir-Heavy-05.ttf") format("truetype");
     font-weight:800;
     font-style:normal
   }
     @font-face{
       font-family:"Avenir";
-      src:url("/fonts/Avenir-Light-07.ttf") format("truetype");
+      src:url("../fonts/Avenir-Light-07.ttf") format("truetype");
       font-weight:lighter;
       font-style:normal
     }
     @font-face{
       font-family:"Avenir";
-      src:url("/fonts/Avenir-Book-01.ttf") format("truetype");
+      src:url("../fonts/Avenir-Book-01.ttf") format("truetype");
       font-weight:normal;
       font-style:normal
     }
     @font-face{
       font-family:"Avenir";
-      src:url("/fonts/Avenir-Book-01.ttf") format("truetype");
+      src:url("../fonts/Avenir-Book-01.ttf") format("truetype");
       font-weight:400;
       font-style:normal
     }
