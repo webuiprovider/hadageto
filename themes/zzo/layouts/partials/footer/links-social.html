@@ -1,13 +1,20 @@
 {{ if $.Param "showSocialLinks" }}
 <div class="footer__social">
   <div class="social">
-    {{ range $name, $path := $.Param "socialOptions" }}
+    {{ range $name, $path := $.Param "socialOptions"  }}
       {{ if $path }}
-      <a href="{{ $path | safeURL }}" title="{{ $name }}" aria-label="{{ $name }}">
+      <!-- <a href="{{ $path | safeURL }}" title="{{ $name }}" aria-label="{{ $name }}">
         {{ partial (print "svgs/social/" $name ".svg") (dict "width" 32 "height" 32) }}
+      </a> -->
+
+      <a href="{{ $path | safeURL }}" title="{{ $name }}" aria-label="{{ $name }}">
+        <i class="flaticon-{{ $name }}"></i>
       </a>
       {{ end }}      
     {{ end }}
+
+
+    
     {{ partial "footer/links-feed.html" . }}
   </div>
 </div>

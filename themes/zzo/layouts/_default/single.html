@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class="main-single main inner">
+<div class="main-single main inner width1280">
 
   <main class="single__main lm {{ if or ($.Param "enableToc") ($.Param "toc") }}{{ if $.Param "hideToc" }}main{{ else if eq ($.Param "tocPosition") "outer" }}main{{ else }}main-main{{ end }}{{ else }}main{{ end }}">
   {{ if $.Param "enableBreadcrumb" }}
