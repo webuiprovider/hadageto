@@ -178,7 +178,7 @@ body, {
   max-width: 250px;
 }
 .toc.cta{
-  top: 16rem;
+  top: 17rem;
 }
 .toc__flexbox.cta{
   top: 14rem;
@@ -396,9 +396,14 @@ body, {
 .theme__light .footer .social a[title="instagram"]{
   display: none;
 }
-
+.theme__light figcaption{
+  color: #000;
+}
 .theme__light .footer .social a{
   margin-left: 15px;
+}
+.theme__light .toc[data-dir=ltr] ul li li{
+  margin-top: 20px;
 }
 
 .theme__light .footer .social a:hover{
