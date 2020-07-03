@@ -8,8 +8,7 @@ devCustom_css = "/css/custom.css"
 useFaviconGenerator = false # https://www.favicon-generator.org/
 languagedir = "ltr" # ltr / rtl
 
-#themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"] # select options for site color theme
-themeOptions = ["light"] # select options for site color theme
+themeOptions = ["light", "dark"] # select options for site color theme
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase"] # not allowed page types in home page. type can be set in front matter or default to folder name.
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"] # not allowed page types in home page sidebar(recent post titles).
 notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page types in archive page
@@ -26,13 +25,13 @@ homeHeaderType = "text" # text, img, slide
 showMobileMenuTerms = ["tags", "categories", "series"]
 
 # navbar
-enableThemeChange = false # site color theme
+enableThemeChange = true # site color theme
 
 # body
 enableBreadcrumb = true # breadcrumb for list, single page
 enableSearch = true # site search with Fuse
 enableSearchHighlight = true # when true, search keyword will be highlighted
-enableGoToTop = false # scroll to top
+enableGoToTop = true # scroll to top
 enableWhoami = false # at the end of single page
 summaryShape = "classic" # card, classic, compact
 archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
@@ -40,6 +39,9 @@ archivePaginate = 13 # items per page
 paginateWindow = 1 # setting it to 1 gives 7 buttons, 2 gives 9, etc. If set 1: [1 ... 4 5 6 ... 356] [1 2 3 4 5 ... 356] etc
 talksPaginate = 8 # items per page
 talksGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
+
+
+
 
 # whoami: usage - home page sidebar, single page bottom of post. all values can be empty
 myname = "editor"
@@ -75,8 +77,6 @@ showPoweredBy = false # show footer text: Powered by Hugo and Zzo theme
 showFeedLinks = false # RSS Feed 
 showSocialLinks = true # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
-customFooter = true
-footerBottom = "<span>Hadageto UK Limited</span>, unit 3 Shelley Farm, Shelley Lane, Ower, Hampshire SO51 6AS<br>Incorporated and Registered in England and Wales with company number: 12323622, Vat Registration Number:336 8990 52"
 
 # service
 googleTagManager = "" # GTM-XXXXXX
@@ -134,10 +134,37 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions] # if set, social icons will show up.
+  email = "mailto:editor@hadageto.com"
+  phone = ""
   facebook = "http://faceboook.com/hadageto"
   twitter = "http://twitter.com/hadageto"
+  github = ""
+  stack-overflow = ""
   instagram = "https://www.instagram.com/hadageto/"
+  google-plus = ""
+  youtube = ""
+  medium = ""
+  tumblr = ""
   linkedin = "https://www.linkedin.com/company/hadageto"
+  pinterest = ""
+  stack-exchange = ""
+  telegram = ""
+  steam = ""
+  weibo = ""
+  douban = ""
+  csdn = ""
+  gitlab = ""
+  mastodon = ""
+  jianshu = ""
+  zhihu = ""
+  signal = ""
+  whatsapp = ""
+  matrix = ""
+  xmpp = ""
+  dev-to = ""
+  gitea = ""
+  google-scholar = ""
+  twitch = ""
 
 [donationOptions]
   enable = false # if set, the donation button will show up on the single page.
@@ -153,8 +180,6 @@ commento = false
   copyrightLinkImage = ""
   copyrightLinkText = ""
 
-
-
 # possible share name: "facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "whatsapp", "telegram"
 [[share]]
   name = "facebook"
@@ -165,31 +190,8 @@ commento = false
   name = "reddit"
 
 [[footerLinks]]
-  name = "Homepage"
-  link = "/"
+  name = ""
+  link = ""
 [[footerLinks]]
-  name = "About"
-  link = "/about"
-[[footerLinks]]
-  name = "FAQs"
-  link = "/faq"
-[[footerLinks]]
-  name = "Register"
-  link = "/register"
-[[footerLinks]]
-  name = "Contact us"
-  link = "/contact-us"
-
-
-[[footerLinksCol2]]
-  name = "Privacy "
-  link = "/privacy"
-[[footerLinksCol2]]
-  name = "Cookie Privacy "
-  link = "/cookie-policy"
-[[footerLinksCol2]]
-  name = "Acceptable Use Policy"
-  link = "/acceptable-use-policy"
-[[footerLinksCol2]]
-  name = "Blog "
-  link = "https://blog.hadageto.com"
+  name = ""
+  link = ""
