@@ -2,7 +2,12 @@
   <div class="navbar__brand">
     {{ if $.Param "logo" | default true }}
     <a href="{{ "https://hadageto.com" | relLangURL }}" title="{{ i18n "tooltip-home" }}" rel="home" class="{{ if eq ($.Param "logoType") "long" }}navbar__long-link{{ else }}navbar__logo-link{{ end }}">
-      <img src="{{ "/hadageto-logo-206.png" | relURL }}" alt="Home" class="navbar__logo">
+      <span class="logo-light">
+        <img src="{{ "/hadageto-logo-206.png" | relURL }}" alt="Home" class="navbar__logo">
+      </span>
+      <span class="logo-dark">
+        <img src="{{ "/hadageto-logo-white.png" | relURL }}" alt="Home" class="navbar__logo">
+      </span>
     </a>
     {{ else }}
     &nbsp;&nbsp;

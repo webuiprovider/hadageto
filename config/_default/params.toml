@@ -77,6 +77,9 @@ showPoweredBy = false # show footer text: Powered by Hugo and Zzo theme
 showFeedLinks = false # RSS Feed 
 showSocialLinks = true # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
+customFooter = true
+footerBottom = "<span>Hadageto UK Limited</span>, unit 3 Shelley Farm, Shelley Lane, Ower, Hampshire SO51 6AS<br>Incorporated and Registered in England and Wales with company number: 12323622, Vat Registration Number:336 8990 52"
+
 
 # service
 googleTagManager = "" # GTM-XXXXXX
@@ -134,37 +137,10 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions] # if set, social icons will show up.
-  email = "mailto:editor@hadageto.com"
-  phone = ""
   facebook = "http://faceboook.com/hadageto"
   twitter = "http://twitter.com/hadageto"
-  github = ""
-  stack-overflow = ""
   instagram = "https://www.instagram.com/hadageto/"
-  google-plus = ""
-  youtube = ""
-  medium = ""
-  tumblr = ""
   linkedin = "https://www.linkedin.com/company/hadageto"
-  pinterest = ""
-  stack-exchange = ""
-  telegram = ""
-  steam = ""
-  weibo = ""
-  douban = ""
-  csdn = ""
-  gitlab = ""
-  mastodon = ""
-  jianshu = ""
-  zhihu = ""
-  signal = ""
-  whatsapp = ""
-  matrix = ""
-  xmpp = ""
-  dev-to = ""
-  gitea = ""
-  google-scholar = ""
-  twitch = ""
 
 [donationOptions]
   enable = false # if set, the donation button will show up on the single page.
@@ -190,8 +166,31 @@ commento = false
   name = "reddit"
 
 [[footerLinks]]
-  name = ""
-  link = ""
+  name = "Homepage"
+  link = "/"
 [[footerLinks]]
-  name = ""
-  link = ""
+  name = "About"
+  link = "/about"
+[[footerLinks]]
+  name = "FAQs"
+  link = "/faq"
+[[footerLinks]]
+  name = "Register"
+  link = "/register"
+[[footerLinks]]
+  name = "Contact us"
+  link = "/contact-us"
+
+  
+[[footerLinksCol2]]
+  name = "Privacy "
+  link = "/privacy"
+[[footerLinksCol2]]
+  name = "Cookie Privacy "
+  link = "/cookie-policy"
+[[footerLinksCol2]]
+  name = "Acceptable Use Policy"
+  link = "/acceptable-use-policy"
+[[footerLinksCol2]]
+  name = "Blog "
+  link = "https://blog.hadageto.com"

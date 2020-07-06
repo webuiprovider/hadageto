@@ -1,8 +1,14 @@
 <footer class="footer">
+  {{ partial "footer/go-to-top" . }}
     <div class="main-footer site-wrapper">
         <div class="site-container">
           <div class="logo-container">
-            <img src="/hadageto-logo-206.png"  alt="Hadageto">
+            <span class="logo-light">
+              <img src="{{ "/hadageto-logo-206.png" | relURL }}" alt="Hadageto" class="navbar__logo">
+            </span>
+            <span class="logo-dark">
+              <img src="{{ "/hadageto-logo-white.png" | relURL }}" alt="Hadageto" class="navbar__logo">
+            </span>
             <p>Keeping you in control of your important documents</p>
           </div>
           <div class="main-container">
