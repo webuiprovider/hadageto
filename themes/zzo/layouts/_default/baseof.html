@@ -14,12 +14,36 @@
     {{ partial "head/custom-head" . }}
 </head>
 
-<body id="root" class="theme__{{ index .Site.Params.themeOptions 0 }}">
+<!-- <body id="root" class="theme__{{ index .Site.Params.themeOptions 0 }}"> -->
+    <body id="root" class="theme__light"></body>
     <script>
         var localTheme = localStorage.getItem('theme');
-        if (localTheme) {
-            document.getElementById('root').className = 'theme__' + localTheme;
+        // if (localTheme) {
+        //     document.getElementById('root').className = 'theme__' + localTheme;
+        // }
+        if (localTheme == 'light') {
+            document.getElementById('root').className = 'theme__light';
         }
+        if (localTheme == 'dark') {
+            document.getElementById('root').className = 'theme__dark';
+        }
+       // console.log(window.localStorage.getItem('theme'));
+
+        //console.log(window.matchMedia('(prefers-color-scheme)').media);
+
+        if (window.matchMedia('(prefers-color-schem: light)').matches)
+            {
+                
+                //console.log("window.localStorage.getItem('theme')");
+                document.getElementById('root').className = 'theme__light';
+            }
+        
+        if (window.matchMedia('(prefers-color-schem: dark)').matches)
+            {
+                document.getElementById('root').className = 'theme__dark';
+                //console.log("dark the");
+            }
+        
     </script>
     <div id="container">
         {{ partial "body/main-left" . }}

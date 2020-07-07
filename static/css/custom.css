@@ -747,3 +747,20 @@ body, {
 
 
 }
+
+
+/* 
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: red;
+    color: #fff;
+  }
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: blue;
+    color: black;
+  }
+} */
