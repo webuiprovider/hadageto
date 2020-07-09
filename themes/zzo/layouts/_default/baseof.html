@@ -15,19 +15,29 @@
 </head>
 
 <!-- <body id="root" class="theme__{{ index .Site.Params.themeOptions 0 }}"> -->
-    <body id="root" class="theme__light"></body>
+    <body  id="root" class="theme__{{ index .Site.Params.themeOptions 0 }} demo-color-scheme-block">
     <script>
         var localTheme = localStorage.getItem('theme');
         // if (localTheme) {
         //     document.getElementById('root').className = 'theme__' + localTheme;
         // }
-        if (localTheme == 'light') {
+
+       /* if (localTheme == 'light') {
             document.getElementById('root').className = 'theme__light';
         }
         if (localTheme == 'dark') {
             document.getElementById('root').className = 'theme__dark';
-        }
-       // console.log(window.localStorage.getItem('theme'));
+        }*/
+
+        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+
+if(userPrefersDark){
+    console.log("User prefers a dark interface");
+}
+
+        console.log(window.localStorage.getItem('mode'));
 
         //console.log(window.matchMedia('(prefers-color-scheme)').media);
 
@@ -35,14 +45,25 @@
             {
                 
                 //console.log("window.localStorage.getItem('theme')");
-                document.getElementById('root').className = 'theme__light';
+                //document.getElementById('root').className = 'theme__light';
             }
         
         if (window.matchMedia('(prefers-color-schem: dark)').matches)
             {
-                document.getElementById('root').className = 'theme__dark';
+                //document.getElementById('root').className = 'theme__dark';
                 //console.log("dark the");
             }
+
+
+            window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', event => {
+            if (event.matches) {
+                console.log("dark the");
+            } else {
+                console.log("light the");
+            }
+            })
+                        
         
     </script>
     <div id="container">

@@ -25,7 +25,7 @@ homeHeaderType = "text" # text, img, slide
 showMobileMenuTerms = ["tags", "categories", "series"]
 
 # navbar
-enableThemeChange = true # site color theme
+enableThemeChange = false # site color theme
 
 # body
 enableBreadcrumb = true # breadcrumb for list, single page

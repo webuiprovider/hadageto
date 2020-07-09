@@ -19,6 +19,34 @@
 <script type="text/javascript">
 
 
+
+
+        if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+  console.log('🎉 Dark mode is supported');
+}
+
+if (window.matchMedia('(prefers-color-scheme)').media === 'dark') {
+  console.log('🎉 Dark mode on');
+}
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    console.log("I am in Dark")
+                }
+
+                // Check to see if Media-Queries are supported
+if (window.matchMedia) {
+  // Check if the dark-mode Media-Query matches
+  if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+    console.log("I am in Dark")
+  } else {
+    console.log("I am in Light")
+  }
+} else {
+  // Default (when Media-Queries are not supported)
+  console.log("I am in Default")
+}
+
+
 // if (localStorage.getItem('mode') === 'dark' ){
 //   console.log("dark");
 // }
@@ -28,12 +56,21 @@
 //   console.log("light mode");
 // }
 
-// if (window.matchMedia('(prefers-color-scheme: light)').matches){
-//   console.log("light");
-// }
+if (window.matchMedia('(prefers-color-scheme: light)').matches){
+  console.log("light");
+}
+
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+  console.log("dark mode");
+}
 
 // document.addEventListener('DOMContentLoaded', (event) => {
-//   ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('theme__dark1') : document.querySelector('body').classList.remove('theme__dark')
+//   ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('theme__dark') : document.querySelector('body').classList.remove('theme__light')
+// })
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   ((localStorage.getItem('mode') || 'light') === 'light') ? document.querySelector('body').classList.add('theme__light') : document.querySelector('body').classList.remove('theme__dark')
 // })
 
 
