@@ -435,13 +435,13 @@ body, {
   color: #124994 !important;
 }
 
-/* .theme__dark .logo-light{
+.theme__dark .logo-light{
   display: none;
 }
 
 .theme__light .logo-light{
   display: block;
-} */
+}
 
 /**** Dark Theme Css */
 .theme__dark a, .theme__dark .toc[data-dir=ltr][data-folding=false] a.active {
@@ -469,13 +469,13 @@ body, {
 .theme__dark .navbar__burger span{
   background-color: #000; 
 }
-/* .theme__dark .logo-dark{
+.theme__dark .logo-dark{
   display: block;
 }
 
 .theme__light .logo-dark{
   display: none;
-} */
+}
 
 .theme__dark .breadcrumb li a{
   color: #fff;
@@ -814,17 +814,30 @@ html[data-theme='dark']  .logo-light{
   display: light !important;
 } */
 
-:root {
+/* :root {
   --demo-color-scheme-block-background: pink;
   --demo-color-scheme-block-text-color: red;
   --logo-dark-display: block;
   --logo-light-display: none;
   --main-footer-background: #212121;
   --taxo-num-background: #212121;
+} */
+:root {
+  --my-var : light;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --my-var : light;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --my-var : dark;
+  }
 }
 
 /* Light mode */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --demo-color-scheme-block-background: white;
     --demo-color-scheme-block-text-color: black;
@@ -833,10 +846,10 @@ html[data-theme='dark']  .logo-light{
     --main-footer-background: #cccccc;
     --taxo-num-background: #c8c8c8;
   }
-}
+} */
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --demo-color-scheme-block-background: black;
     --demo-color-scheme-block-text-color: white;
@@ -845,9 +858,9 @@ html[data-theme='dark']  .logo-light{
     --main-footer-background: #212121;    
     --taxo-num-background: #212121;
   }
-}
+} */
 
-.demo-color-scheme-block {
+/* .demo-color-scheme-block {
   background: var(--demo-color-scheme-block-background);
   color: var(--demo-color-scheme-block-text-color);
 }
@@ -866,4 +879,19 @@ html[data-theme='dark']  .logo-light{
 .taxo__num {
   background-color: var(--taxo-num-background) !important;
 }
+} */
+
+#screenshot {
+  background-image: url(/settings-light.png);
+  display: block;
+    width: 160px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+  #screenshot {
+    background-image: url(/settings-dark.png);
+  }
 }

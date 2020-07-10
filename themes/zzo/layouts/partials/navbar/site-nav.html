@@ -2,11 +2,32 @@
   <div class="navbar__brand">
     {{ if $.Param "logo" | default true }}
     <a href="{{ "https://hadageto.com" | relLangURL }}" title="{{ i18n "tooltip-home" }}" rel="home" class="{{ if eq ($.Param "logoType") "long" }}navbar__long-link{{ else }}navbar__logo-link{{ end }}">
+      
+      <!-- <img src="{{ "/hadageto-logo-206.png" | relURL }}" alt="Home" class="navbar__logo"> -->
+
+      <!-- <picture>
+        <source 
+          srcset="{{ "/hadageto-logo-206.png" | relURL }}"
+          media="(prefers-color-scheme: dark)"
+        />
+        <source
+          srcset="{{ "/hadageto-logo-white.png" | relURL }}"
+          media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+        />
+        <img src="{{ "/hadageto-logo-white.png" | relURL }}" id="screenshot" loading="lazy" />
+      </picture> -->
+      <!-- <span id="screenshot" src=""></span> -->
+      
+<!--       
+      <img src="{{ "/hadageto-logo-206.png" | relURL }}" id="screenshot" media="(prefers-color-scheme: dark)" />
+      <img src="{{ "/hadageto-logo-white.png" | relURL }}" id="screenshot" media="(prefers-color-scheme: light)" /> -->
+      <!-- <img src="{{ "/hadageto-logo-white.png" | relURL }}" id="screenshot" loading="lazy" /> -->
+
       <span class="logo-light">
-        <img src="{{ "/hadageto-logo-206.png" | relURL }}" alt="Home" class="navbar__logo">
+        <img src="{{ "/settings-light.png" | relURL }}" alt="Home" class="navbar__logo">
       </span>
       <span class="logo-dark">
-        <img src="{{ "/hadageto-logo-white.png" | relURL }}" alt="Home" class="navbar__logo">
+        <img src="{{ "/settings-dark.png" | relURL }}" alt="Home" class="navbar__logo">
       </span>
     </a>
     {{ else }}

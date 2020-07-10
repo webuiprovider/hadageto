@@ -33,6 +33,7 @@ $cursive-font: {{ .Site.Data.font.cursive_font }};
 
 $viewport_size: {{ .Site.Params.viewportSize | default "normal" }};
 
+
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
@@ -95,3 +96,28 @@ $viewport_size: {{ .Site.Params.viewportSize | default "normal" }};
 @import 'pages/wrapper';
 @import 'pages/publication';
 @import 'pages/resume';
+
+
+
+//converting scss variable into css variable
+// :root {
+//     @each $name, $color in $light{
+//         --color-#{$name} : #{$color};
+//     }
+//   --theme: 'light';
+// }
+
+// @media(prefers-color-scheme: dark) {
+//     :root {
+//         @each $name, $color in $dark{
+//             --color-#{$name} : #{$color};
+//         }
+//     --theme : 'dark';
+//     }
+// }
+//creating a function to get color instead of using css varible
+// @function getColor($color-name){
+//     @return var(--color-#{$color-name});
+// }
+
+

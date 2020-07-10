@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" dir="{{ $.Param "languagedir" | default "ltr" }}">
+<html lang="{{ .Site.Language.Lang }}" dir="{{ $.Param "languagedir" | default "ltr" }}" class="" data-theme='dark'>
 
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,7 +15,86 @@
 </head>
 
 <!-- <body id="root" class="theme__{{ index .Site.Params.themeOptions 0 }}"> -->
-    <body  id="root" class="theme__{{ index .Site.Params.themeOptions 0 }} demo-color-scheme-block">
+    
+        <body id="root" class="theme__light" data-theme='dark'>
+            
+        <script>
+           var preference_query = window.matchMedia('(prefers-color-scheme: dark)');
+            function checkPreference(query) {
+                if (query.matches) {
+                    // A dark color scheme preference is set so we add the class from our html element
+                   // document.documentElement.classList.add('darkmode');
+                    document.documentElement.classList.add('theme__dark');
+                    document.getElementById('root').classList.remove('theme__light');
+                } else {
+                    // No dark color scheme preference is set so we remove the class from our html element
+                    document.documentElement.classList.remove('theme__dark');
+                    document.getElementById('root').classList.add('theme__light');
+                }
+            }
+            checkPreference(preference_query);
+            preference_query.addListener(checkPreference);
+
+            /*
+            let myVar = 'Hi Person! (works)';
+            let c =  document.documentElement.style.getPropertyValue('--my-var');
+            console.log(c);
+            //document.documentElement.style.getPropertyValue('--my-var');
+            document.getElementsByTagName('html')[0].style.setProperty('--my-var', '"' + c + '"');
+
+            var tetxtxt = (getPropertyValue("--my-var"));
+            console.log(tetxtxt);
+            window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', event => {
+            if (event.matches) {
+                
+                    document.write("<body  id='root' class='theme__dark' media='(prefers-color-scheme: dark)'>");
+                
+            }else{
+                document.write("<body  id='root' class='theme__light' media='(prefers-color-scheme: light), (prefers-color-scheme: no-preference)'>");
+                
+                
+            }
+            });
+
+            */
+
+            /*
+
+            const screenshotEl = document.getElementById('screenshot');
+            const themeclass = document.getElementById('root');
+
+            const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
+       
+            const setScreenshot = isDark =>
+              (screenshotEl.src = `settings-${isDark ? 'dark' : 'light'}.png`);
+
+
+            
+              const setTheme = isDark =>
+              (themeclass.className = `theme__${isDark ? 'dark' : 'light'}`);
+       
+            setScreenshot(matchDark.matches);
+            setTheme(matchDark.matches);
+
+
+            matchDark.addListener(e => {
+                setScreenshot(e.matches);
+                setTheme(e.matches);
+
+            });
+
+            if (matchDark == 'light') {
+            document.getElementById('root').className = 'theme__light';
+        }
+        if (matchDark == 'dark') {
+            document.getElementById('root').className = 'theme__dark';
+        }
+*/
+
+
+          </script>
+
     <script>
         var localTheme = localStorage.getItem('theme');
         // if (localTheme) {
@@ -29,6 +108,7 @@
             document.getElementById('root').className = 'theme__dark';
         }*/
 
+        /*
         const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
@@ -36,8 +116,9 @@ const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-
 if(userPrefersDark){
     console.log("User prefers a dark interface");
 }
+*/
 
-        console.log(window.localStorage.getItem('mode'));
+        //console.log(window.localStorage.getItem('mode'));
 
         //console.log(window.matchMedia('(prefers-color-scheme)').media);
 
@@ -54,16 +135,22 @@ if(userPrefersDark){
                 //console.log("dark the");
             }
 
-
-            window.matchMedia('(prefers-color-scheme: dark)')
+/*
+            window.matchMedia('(prefers-color-scheme: light)')
             .addEventListener('change', event => {
             if (event.matches) {
-                console.log("dark the");
+                console.log("light  theme");
+                document.getElementById('root').classList.add('theme__light');
+                document.querySelector('body').classList.remove('theme__dark');
             } else {
-                console.log("light the");
+                console.log("dark theme");
+                document.getElementById('root').classList.add('theme__dark');
+                
+                document.querySelector('body').classList.remove('theme__light');
             }
             })
-                        
+                   
+*/
         
     </script>
     <div id="container">

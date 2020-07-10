@@ -9,6 +9,26 @@
 @import 'hackercode';
 @import 'solarizedcode';
 @import 'kimbiecode';
+// :root {
+//   $themes: (
+//     light: $light,
+//   )
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     $themes: (
+//       light: $light,
+//     )
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     $themes: (
+//       light: $dark,
+//     )
+//   }
+// }
 
 $themes: (
   dark: $dark,

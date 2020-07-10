@@ -21,19 +21,21 @@
 
 
 
-        if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-  console.log('🎉 Dark mode is supported');
-}
+//         if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+//   console.log('🎉 Dark mode is supported');
+// }
 
-if (window.matchMedia('(prefers-color-scheme)').media === 'dark') {
-  console.log('🎉 Dark mode on');
-}
+// if (window.matchMedia('(prefers-color-scheme)').media === 'dark') {
+//   console.log('🎉 Dark mode on');
+// }
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+/*if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     console.log("I am in Dark")
                 }
+      */
 
                 // Check to see if Media-Queries are supported
+                /*
 if (window.matchMedia) {
   // Check if the dark-mode Media-Query matches
   if(window.matchMedia('(prefers-color-scheme: dark)').matches){
@@ -46,6 +48,8 @@ if (window.matchMedia) {
   console.log("I am in Default")
 }
 
+*/
+
 
 // if (localStorage.getItem('mode') === 'dark' ){
 //   console.log("dark");
@@ -56,6 +60,7 @@ if (window.matchMedia) {
 //   console.log("light mode");
 // }
 
+/*
 if (window.matchMedia('(prefers-color-scheme: light)').matches){
   console.log("light");
 }
@@ -64,6 +69,7 @@ if (window.matchMedia('(prefers-color-scheme: light)').matches){
 if (window.matchMedia('(prefers-color-scheme: dark)').matches){
   console.log("dark mode");
 }
+*/
 
 // document.addEventListener('DOMContentLoaded', (event) => {
 //   ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('theme__dark') : document.querySelector('body').classList.remove('theme__light')
@@ -99,4 +105,25 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches){
   //                document.documentElement.classList.remove('transition');
   //            }, 1000)
   //        }
+
+
+  
  </script>
+
+<script>
+  var preference_query = window.matchMedia('(prefers-color-scheme: dark)');
+   function checkPreference(query) {
+       if (query.matches) {
+           // A dark color scheme preference is set so we add the class from our html element
+          // document.documentElement.classList.add('darkmode');
+          document.getElementById('root').classList.add('theme__dark');
+           document.getElementById('root').classList.remove('theme__light');
+       } else {
+           // No dark color scheme preference is set so we remove the class from our html element
+           document.getElementById('root').classList.remove('theme__dark');
+           document.getElementById('root').classList.add('theme__light');
+       }
+   }
+   checkPreference(preference_query);
+   preference_query.addListener(checkPreference);
+  </script>
