@@ -16,7 +16,7 @@
 
 <!-- <body id="root" class="theme__{{ index .Site.Params.themeOptions 0 }}"> -->
     
-        <body id="root" class="theme__light" data-theme='dark'>
+        <body id="root" class="theme__{{ index .Site.Params.themeOptions 0 }}" data-theme='dark'>
             
         <script>
            var preference_query = window.matchMedia('(prefers-color-scheme: dark)');

@@ -503,6 +503,11 @@
 
         rootEleme.removeAttribute('class');
         rootEleme.classList.add('theme__' + selectedThemeVariant);
+        if (selectedThemeVariant == 'light')
+        {
+          document.documentElement.classList.remove('theme__dark');
+        }
+
         selectThemeElem.forEach(function(rootElem) {
           rootElem.querySelectorAll('a').forEach(function (elem) {
             if (elem.classList) {
